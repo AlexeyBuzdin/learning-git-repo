@@ -36,9 +36,7 @@ public class Puzzle {
 	 */
 	private static void puzzleNo1() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+
 		blackBox.puzzleNo1(result);
 	}
 
@@ -113,9 +111,14 @@ public class Puzzle {
 	 */
 	private static void puzzleNo7() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+		int decimal = 9;
+        int octal = 0;
+        while(decimal != 0){
+            octal *= 10;
+            octal += decimal%8;
+            decimal /= 8;
+        }
+        result += octal;
 		blackBox.puzzleNo7(result);
 	}
 
