@@ -59,24 +59,21 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
-        for(int i = 0; i < 100; i++)
+        int j = 0;
+        for(int i = 1; i < 100; i++)
         {
-            int j = 0;
-            if(j == 6)     result = i;
-            if(i % 3 == 0 || i % 5 == 0)
-            {
+            if(j == 6) {
+                result = i;
+                break;
+            } else if(i % 3 == 0 && i % 5 == 0) {
                 System.out.println("BuzzFizz");
                 j++;
-            }
-            else if(i % 3 == 0)
-                System.out.println("Fizz");
-            else if(i % 5 == 0)
-                System.out.println("Buzz");
-            else System.out.println(i);
+            } else System.out.println(i);
         }
 		/*
 		 * Your code goes here
 		 */
+        System.out.println(j);
 		blackBox.puzzleNo2(result);
 	}
 
