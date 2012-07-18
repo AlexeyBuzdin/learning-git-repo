@@ -78,9 +78,27 @@ public class Puzzle {
 	 */
 	private static void puzzleNo4() {
 		int result [] = {};
-		/*
-		 * Your code goes here
-		 */
+        int count = 0;
+        for(int i=13;i<=53;i++ ){
+            int a;
+            a = i % 10;
+            if(a==7){
+                count++;
+            };
+        }
+        result = new int[count];
+        count = 0;
+        for(int i=13;i<=53;i++ ){
+            int a;
+            a = i % 10;
+            if(a==7){
+                result[count]= i;
+                count++;
+            };
+        }
+            /*
+            * Your code goes here
+            */
 		blackBox.puzzleNo4(result);
 	}
 	
