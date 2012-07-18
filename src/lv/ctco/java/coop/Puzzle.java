@@ -143,9 +143,7 @@ public class Puzzle {
 	 */
 	private static void puzzleNo9() {
 		double result = 0;
-		/*
-		 * Your code goes here
-		 */
+        result=(3+4+5+2)/4;
 		blackBox.puzzleNo9(result);
 	}
 
