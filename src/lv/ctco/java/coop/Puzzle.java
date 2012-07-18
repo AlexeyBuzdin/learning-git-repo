@@ -61,12 +61,17 @@ public class Puzzle {
 		int result = 0;
         for(int i = 0; i < 100; i++)
         {
-            if(i % 3 == 0)
+            int j = 0;
+            if(j == 6)     result = i;
+            if(i % 3 == 0 || i % 5 == 0)
+            {
+                System.out.println("BuzzFizz");
+                j++;
+            }
+            else if(i % 3 == 0)
                 System.out.println("Fizz");
             else if(i % 5 == 0)
                 System.out.println("Buzz");
-            else if(i % 3 == 0 || i % 5 == 0)
-                System.out.println("Buzz Fizz");
             else System.out.println(i);
         }
 		/*
@@ -79,10 +84,13 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+		int result =1;
+
+         for(int i=1;i<=5;i++)
+         {
+                  result*=i;
+         }
+
 		blackBox.puzzleNo3(result);
 	}
 
@@ -92,9 +100,27 @@ public class Puzzle {
 	 */
 	private static void puzzleNo4() {
 		int result [] = {};
-		/*
-		 * Your code goes here
-		 */
+        int count = 0;
+        for(int i=13;i<=53;i++ ){
+            int a;
+            a = i % 10;
+            if(a==7){
+                count++;
+            };
+        }
+        result = new int[count];
+        count = 0;
+        for(int i=13;i<=53;i++ ){
+            int a;
+            a = i % 10;
+            if(a==7){
+                result[count]= i;
+                count++;
+            };
+        }
+            /*
+            * Your code goes here
+            */
 		blackBox.puzzleNo4(result);
 	}
 	
@@ -123,8 +149,6 @@ public class Puzzle {
             result += Integer.toString(ourNumber%2);
             ourNumber /= 2;
         }
-
-        System.out.println(result);
 
 		blackBox.puzzleNo6(result);
 	}
