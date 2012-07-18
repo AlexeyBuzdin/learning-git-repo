@@ -79,10 +79,13 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+		int result =1;
+
+         for(int i=1;i<=5;i++)
+         {
+                  result*=i;
+         }
+
 		blackBox.puzzleNo3(result);
 	}
 
