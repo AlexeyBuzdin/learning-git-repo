@@ -61,12 +61,17 @@ public class Puzzle {
 		int result = 0;
         for(int i = 0; i < 100; i++)
         {
-            if(i % 3 == 0)
+            int j = 0;
+            if(j == 6)     result = i;
+            if(i % 3 == 0 || i % 5 == 0)
+            {
+                System.out.println("BuzzFizz");
+                j++;
+            }
+            else if(i % 3 == 0)
                 System.out.println("Fizz");
             else if(i % 5 == 0)
                 System.out.println("Buzz");
-            else if(i % 3 == 0 || i % 5 == 0)
-                System.out.println("Buzz Fizz");
             else System.out.println(i);
         }
 		/*
