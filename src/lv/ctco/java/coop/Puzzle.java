@@ -36,12 +36,16 @@ public class Puzzle {
 	 */
 	private static void puzzleNo1() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+		int first=1;
+        int second=1;
+        for(int i=0;i<7;i++)
+        {
+            result=first+second;
+            first=second;
+            second=result;
+        }
 		blackBox.puzzleNo1(result);
 	}
-
 	
 	/*
 	 * Puzzle 2 asks you to find sixth number that counts both as fizz and buzz
