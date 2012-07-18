@@ -36,12 +36,16 @@ public class Puzzle {
 	 */
 	private static void puzzleNo1() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+		int first=1;
+        int second=1;
+        for(int i=0;i<7;i++)
+        {
+            result=first+second;
+            first=second;
+            second=result;
+        }
 		blackBox.puzzleNo1(result);
 	}
-
 	
 	/*
 	 * Puzzle 2 asks you to find sixth number that counts both as fizz and buzz
@@ -55,6 +59,16 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
+        for(int i = 0; i < 100; i++)
+        {
+            if(i % 3 == 0)
+                System.out.println("Fizz");
+            else if(i % 5 == 0)
+                System.out.println("Buzz");
+            else if(i % 3 == 0 || i % 5 == 0)
+                System.out.println("Buzz Fizz");
+            else System.out.println(i);
+        }
 		/*
 		 * Your code goes here
 		 */
@@ -107,9 +121,11 @@ public class Puzzle {
 	 */
 	private static void puzzleNo5() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+
+        for(int i = 1; i <= 5; i++) {
+            result += i * i;
+        }
+
 		blackBox.puzzleNo5(result);
 	}
 
@@ -119,9 +135,15 @@ public class Puzzle {
 	 */
 	private static void puzzleNo6() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+        int ourNumber = 15;
+
+        for (int i = 0; i < 4; i++) {
+            result += Integer.toString(ourNumber%2);
+            ourNumber /= 2;
+        }
+
+        System.out.println(result);
+
 		blackBox.puzzleNo6(result);
 	}
 
@@ -131,9 +153,14 @@ public class Puzzle {
 	 */
 	private static void puzzleNo7() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+		int decimal = 9;
+        int octal = 0;
+        while(decimal != 0){
+            octal *= 10;
+            octal += decimal%8;
+            decimal /= 8;
+        }
+        result += octal;
 		blackBox.puzzleNo7(result);
 	}
 
@@ -143,9 +170,10 @@ public class Puzzle {
 	 */
 	private static void puzzleNo8() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+        int myNumber = 31;
+
+        result=Integer.toHexString(myNumber);
+
 		blackBox.puzzleNo8(result);
 	}
 
