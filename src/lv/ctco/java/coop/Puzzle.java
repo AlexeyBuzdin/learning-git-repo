@@ -62,18 +62,15 @@ public class Puzzle {
         int j = 0;
         for(int i = 1; i < 100; i++)
         {
+            if(i % 3 == 0 && i % 5 == 0) {
+                System.out.println("BuzzFizz");
+                j++;
+            }
             if(j == 6) {
                 result = i;
                 break;
-            } else if(i % 3 == 0 && i % 5 == 0) {
-                System.out.println("BuzzFizz");
-                j++;
-            } else System.out.println(i);
+            }
         }
-		/*
-		 * Your code goes here
-		 */
-        System.out.println(j);
 		blackBox.puzzleNo2(result);
 	}
 
@@ -81,7 +78,7 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-		int result =1;
+		int result = 1;
 
          for(int i=1;i<=5;i++)
          {
