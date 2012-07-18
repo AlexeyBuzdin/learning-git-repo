@@ -142,8 +142,6 @@ public class Puzzle {
             ourNumber /= 2;
         }
 
-        System.out.println(result);
-
 		blackBox.puzzleNo6(result);
 	}
 
