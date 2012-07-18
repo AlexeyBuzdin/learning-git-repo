@@ -125,9 +125,10 @@ public class Puzzle {
 	 */
 	private static void puzzleNo8() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+        int myNumber = 31;
+
+        result=Integer.toHexString(myNumber);
+
 		blackBox.puzzleNo8(result);
 	}
 
