@@ -93,9 +93,11 @@ public class Puzzle {
 	 */
 	private static void puzzleNo5() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+
+        for(int i = 1; i <= 5; i++) {
+            result += i * i;
+        }
+
 		blackBox.puzzleNo5(result);
 	}
 
