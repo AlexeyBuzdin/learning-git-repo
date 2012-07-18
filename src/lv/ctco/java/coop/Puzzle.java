@@ -36,12 +36,16 @@ public class Puzzle {
 	 */
 	private static void puzzleNo1() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+		int first=1;
+        int second=1;
+        for(int i=0;i<7;i++)
+        {
+            result=first+second;
+            first=second;
+            second=result;
+        }
 		blackBox.puzzleNo1(result);
 	}
-
 	
 	/*
 	 * Puzzle 2 asks you to find sixth number that counts both as fizz and buzz
@@ -55,6 +59,14 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
+        for(int i = 0; i < 100; i++)
+        {
+            if(i % 3 == 0)
+                System.out.println("Fizz");
+            else if(i % 5 == 0)
+                System.out.println("Buzz");
+            else System.out.println(i);
+        }
 		/*
 		 * Your code goes here
 		 */
@@ -89,9 +101,11 @@ public class Puzzle {
 	 */
 	private static void puzzleNo5() {
 		int result = 0;
-		/*
-		 * Your code goes here
-		 */
+
+        for(int i = 1; i <= 5; i++) {
+            result += i * i;
+        }
+
 		blackBox.puzzleNo5(result);
 	}
 
