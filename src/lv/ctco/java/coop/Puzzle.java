@@ -101,9 +101,15 @@ public class Puzzle {
 	 */
 	private static void puzzleNo6() {
 		String result = "";
-		/*
-		 * Your code goes here
-		 */
+        int ourNumber = 15;
+
+        for (int i = 0; i < 4; i++) {
+            result += Integer.toString(ourNumber%2);
+            ourNumber /= 2;
+        }
+
+        System.out.println(result);
+
 		blackBox.puzzleNo6(result);
 	}
 
