@@ -2,6 +2,7 @@
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
     <libelement value="file://$MODULE_DIR$/bin" />
+    <libelement value="file:///home/alexey/dev/java/juis2012_git_lessons/bin" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
@@ -17,7 +18,7 @@
     <orderEntry type="module-library">
       <library name="bin">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/bin" />
+          <root url="file:///home/alexey/dev/java/juis2012_git_lessons/bin" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
