@@ -59,17 +59,19 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
-        int j = 0;
-        for(int i = 1; i < 100; i++)
-        {
-            if(i % 3 == 0 && i % 5 == 0) {
-                System.out.println("BuzzFizz");
-                j++;
-            }
-            if(j == 6) {
+        int count = 0;
+        for(int i = 1; i <=100 && count < 6; i++){
+            if(i % 3 == 0){
+                System.out.println("Fizz");
+            } else System.out.println(i);
+            if(i % 5 == 0){
+                System.out.println("Fizz");
+            } else System.out.println(i);
+            if(i % 3 == 0 && i % 5 == 0){
+                System.out.println("FizzBuzz");
+                count++;
                 result = i;
-                break;
-            }
+            } else System.out.println(i);
         }
 		blackBox.puzzleNo2(result);
 	}
