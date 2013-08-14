@@ -5,18 +5,9 @@ public class Puzzle {
 	private static Box blackBox;
 
 	public static void main(String... args) {
-		try{
-			Class c = Class.forName("lv.ctco.java.coop.BlackBox");
-			blackBox = (Box) c.newInstance();	  
-		} catch (ClassNotFoundException e){
-			System.out.println("Could not find the desirable class");
-		} catch (InstantiationException e) {
-			System.out.println("An error has occured");
-		} catch (IllegalAccessException e) {
-			System.out.println("An error has occured");
-		}
-		
-		puzzleNo1();
+        precook();
+
+        puzzleNo1();
 		puzzleNo2();
 		puzzleNo3();
 		puzzleNo4();
@@ -24,29 +15,24 @@ public class Puzzle {
 		puzzleNo6();
 		puzzleNo7();
 		puzzleNo8();
-		puzzleNo9();		
-		/*
-		 * If all puzzles are solved black box will uncover a secret information about GIT technology 
-		 */
-		System.out.println(blackBox.depuzzle());
-	}
-	
-	/*
-	 * Puzzle 1 is to find ninth number in Fibbonaci sequence
-	 */
+		puzzleNo9();
+
+        /*
+         * If all puzzles are solved black box will uncover a secret information about GIT technology
+         */
+        printResults();
+
+    }
+
+    /*
+     * Puzzle 1 is to find ninth number in Fibbonaci sequence
+     */
 	private static void puzzleNo1() {
 		int result = 0;
-		int first=1;
-        int second=1;
-        for(int i=0;i<7;i++)
-        {
-            result=first+second;
-            first=second;
-            second=result;
-        }
+
 		blackBox.puzzleNo1(result);
 	}
-	
+
 	/*
 	 * Puzzle 2 asks you to find sixth number that counts both as fizz and buzz
 	 * in Fizz Buzz exercise.
@@ -59,20 +45,7 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
-        int count = 0;
-        for(int i = 1; i <=100 && count < 6; i++){
-            if(i % 3 == 0){
-                System.out.println("Fizz");
-            } else System.out.println(i);
-            if(i % 5 == 0){
-                System.out.println("Fizz");
-            } else System.out.println(i);
-            if(i % 3 == 0 && i % 5 == 0){
-                System.out.println("FizzBuzz");
-                count++;
-                result = i;
-            } else System.out.println(i);
-        }
+
 		blackBox.puzzleNo2(result);
 	}
 
@@ -80,12 +53,7 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-		int result = 1;
-
-         for(int i=1;i<=5;i++)
-         {
-                  result*=i;
-         }
+		int result = 0;
 
 		blackBox.puzzleNo3(result);
 	}
@@ -96,27 +64,7 @@ public class Puzzle {
 	 */
 	private static void puzzleNo4() {
 		int result [] = {};
-        int count = 0;
-        for(int i=13;i<=53;i++ ){
-            int a;
-            a = i % 10;
-            if(a==7){
-                count++;
-            };
-        }
-        result = new int[count];
-        count = 0;
-        for(int i=13;i<=53;i++ ){
-            int a;
-            a = i % 10;
-            if(a==7){
-                result[count]= i;
-                count++;
-            };
-        }
-            /*
-            * Your code goes here
-            */
+
 		blackBox.puzzleNo4(result);
 	}
 	
@@ -125,10 +73,6 @@ public class Puzzle {
 	 */
 	private static void puzzleNo5() {
 		int result = 0;
-
-        for(int i = 1; i <= 5; i++) {
-            result += i * i;
-        }
 
 		blackBox.puzzleNo5(result);
 	}
@@ -139,12 +83,6 @@ public class Puzzle {
 	 */
 	private static void puzzleNo6() {
 		String result = "";
-        int ourNumber = 15;
-
-        for (int i = 0; i < 4; i++) {
-            result += Integer.toString(ourNumber%2);
-            ourNumber /= 2;
-        }
 
 		blackBox.puzzleNo6(result);
 	}
@@ -155,14 +93,7 @@ public class Puzzle {
 	 */
 	private static void puzzleNo7() {
 		String result = "";
-		int decimal = 9;
-        int octal = 0;
-        while(decimal != 0){
-            octal *= 10;
-            octal += decimal%8;
-            decimal /= 8;
-        }
-        result += octal;
+
 		blackBox.puzzleNo7(result);
 	}
 
@@ -172,9 +103,6 @@ public class Puzzle {
 	 */
 	private static void puzzleNo8() {
 		String result = "";
-        int myNumber = 31;
-
-        result=Integer.toHexString(myNumber);
 
 		blackBox.puzzleNo8(result);
 	}
@@ -185,8 +113,31 @@ public class Puzzle {
 	 */
 	private static void puzzleNo9() {
 		double result = 0;
-        result=(3+4+5+2)/4.0;
+
 		blackBox.puzzleNo9(result);
 	}
+
+
+
+
+
+
+
+
+
+
+    private static void precook() {
+        try{
+            Class c = lv.ctco.java.coop.BlackBox.class;
+            blackBox = (Box) c.newInstance();
+        } catch (Exception e){
+            throw new RuntimeException("Could not find the desirable class");
+        }
+    }
+
+    private static void printResults() {
+
+        System.out.println(blackBox.depuzzle());
+    }
 
 }
