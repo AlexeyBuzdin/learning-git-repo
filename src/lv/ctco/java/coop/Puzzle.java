@@ -57,8 +57,22 @@ public class Puzzle {
 	 */
 	private static void puzzleNo2() {
 		int result = 0;
+        int n = 100;
+        int count = 0;
+        int end = 6;
+        for(int i = 1; i <= n; i++){
+            if(i % 3 == 0 && i % 5 == 0) {
+                count++;
+                System.out.print("FizzBuzz!");
+                if(count == end) result = i;
+            }
+            else if(i % 3 == 0) System.out.print("Fizz ");
+                else if(i % 5 == 0) System.out.print("Buzz ");
+                     else System.out.print(" " + i + " ");
+        }
 
-		blackBox.puzzleNo2(result);
+        System.out.println("\n" + result);
+        blackBox.puzzleNo2(result);
 	}
 
 	/*
