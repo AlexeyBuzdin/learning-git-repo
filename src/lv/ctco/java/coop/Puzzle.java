@@ -123,7 +123,7 @@ public class Puzzle {
 	 * in number 34052 and divide it by its quantity
 	 */
 	private static void puzzleNo9() {
-		double result = 0;
+		double result = (3+4+5+2)/4;
 
 		blackBox.puzzleNo9(result);
 	}
