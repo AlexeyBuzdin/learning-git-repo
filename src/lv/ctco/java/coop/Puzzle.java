@@ -1,6 +1,7 @@
 package lv.ctco.java.coop;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Puzzle {
 
@@ -18,7 +19,6 @@ public class Puzzle {
 		puzzleNo7();
 		puzzleNo8();
 		puzzleNo9();
-
 
         /*
          * If all puzzles are solved black box will uncover a secret information about GIT technology
@@ -79,11 +79,7 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-        int n = 5;
-        int fact = 1;
-        for (int i = 1; i <= n; i++)
-            fact *= i;
-		int result = fact;
+		int result = 0;
 
 		blackBox.puzzleNo3(result);
 	}
@@ -94,7 +90,15 @@ public class Puzzle {
 	 */
 	private static void puzzleNo4() {
 		int result [] = {};
-
+        List<Integer> res=new ArrayList<Integer>();
+        for(int i=13; i<54; i++)
+            if(i-i/10*10==7)
+                res.add(i);
+        int size=res.size();
+        result=new int[size];
+        for(int i=0;i<size;i++){
+            result[i]=res.get(i);
+        }
 		blackBox.puzzleNo4(result);
 	}
 	
@@ -104,10 +108,6 @@ public class Puzzle {
 	private static void puzzleNo5() {
 		int result = 0;
 
-        for (int i : Arrays.asList(1, 2, 3, 4, 5) ) {
-            result += i*i;
-        }
-
 		blackBox.puzzleNo5(result);
 	}
 
@@ -116,7 +116,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo6() {
-		String result = "1111";
+		String result = "";
 
 		blackBox.puzzleNo6(result);
 	}
@@ -126,7 +126,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo7() {
-		String result = "11";
+		String result = "";
 
 		blackBox.puzzleNo7(result);
 	}
@@ -136,7 +136,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo8() {
-		String result = "1F";
+		String result = "";
 
 		blackBox.puzzleNo8(result);
 	}
@@ -146,7 +146,7 @@ public class Puzzle {
 	 * in number 34052 and divide it by its quantity
 	 */
 	private static void puzzleNo9() {
-		double result = (3+4+5+2)/4.0;
+		double result = 0;
 
 		blackBox.puzzleNo9(result);
 	}
