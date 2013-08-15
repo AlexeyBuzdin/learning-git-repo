@@ -1,5 +1,7 @@
 package lv.ctco.java.coop;
 
+import java.util.Arrays;
+
 public class Puzzle {
 
 	private static Box blackBox;
@@ -16,6 +18,7 @@ public class Puzzle {
 		puzzleNo7();
 		puzzleNo8();
 		puzzleNo9();
+
 
         /*
          * If all puzzles are solved black box will uncover a secret information about GIT technology
@@ -74,6 +77,10 @@ public class Puzzle {
 	private static void puzzleNo5() {
 		int result = 0;
 
+        for (int i : Arrays.asList(1, 2, 3, 4, 5) ) {
+            result += i*i;
+        }
+
 		blackBox.puzzleNo5(result);
 	}
 
@@ -82,7 +89,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo6() {
-		String result = "";
+		String result = "1111";
 
 		blackBox.puzzleNo6(result);
 	}
