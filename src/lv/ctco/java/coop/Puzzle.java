@@ -1,5 +1,7 @@
 package lv.ctco.java.coop;
 
+import java.util.Arrays;
+
 public class Puzzle {
 
 	private static Box blackBox;
@@ -73,6 +75,10 @@ public class Puzzle {
 	 */
 	private static void puzzleNo5() {
 		int result = 0;
+
+        for (int i : Arrays.asList(1, 2, 3, 4, 5)) {
+            result += i*i;
+        }
 
 		blackBox.puzzleNo5(result);
 	}
