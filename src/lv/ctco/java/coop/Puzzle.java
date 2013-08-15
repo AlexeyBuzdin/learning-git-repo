@@ -65,7 +65,11 @@ public class Puzzle {
 	 * Puzzle 3 is to find a factorial of five
 	 */
 	private static void puzzleNo3() {
-		int result = 0;
+        int n = 5;
+        int fact = 1;
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+		int result = fact;
 
 		blackBox.puzzleNo3(result);
 	}
@@ -108,7 +112,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo7() {
-		String result = "";
+		String result = "11";
 
 		blackBox.puzzleNo7(result);
 	}
@@ -118,7 +122,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo8() {
-		String result = "";
+		String result = "1F";
 
 		blackBox.puzzleNo8(result);
 	}
@@ -128,7 +132,7 @@ public class Puzzle {
 	 * in number 34052 and divide it by its quantity
 	 */
 	private static void puzzleNo9() {
-		double result = 0;
+		double result = (3+4+5+2)/4;
 
 		blackBox.puzzleNo9(result);
 	}
