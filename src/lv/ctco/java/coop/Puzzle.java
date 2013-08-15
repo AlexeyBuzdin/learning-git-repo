@@ -1,6 +1,8 @@
 package lv.ctco.java.coop;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Puzzle {
 
@@ -94,7 +96,15 @@ public class Puzzle {
      */
     private static void puzzleNo4() {
         int result [] = {};
-
+        List<Integer> res=new ArrayList<Integer>();
+        for(int i=13; i<54; i++)
+            if(i-i/10*10==7)
+                res.add(i);
+        int size=res.size();
+        result=new int[size];
+        for(int i=0;i<size;i++){
+            result[i]=res.get(i);
+        }
         blackBox.puzzleNo4(result);
     }
 
