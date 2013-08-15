@@ -63,15 +63,15 @@ public class Puzzle {
         for(int i = 1; i <= n; i++){
             if(i % 3 == 0 && i % 5 == 0) {
                 count++;
-                System.out.print("FizzBuzz!");
+                //System.out.print("FizzBuzz!");
                 if(count == end) result = i;
             }
-            else if(i % 3 == 0) System.out.print("Fizz ");
-                else if(i % 5 == 0) System.out.print("Buzz ");
-                     else System.out.print(" " + i + " ");
+            else if(i % 3 == 0) ;//System.out.print("Fizz ");
+                else if(i % 5 == 0) ;//stem.out.print("Buzz ");
+                    //else System.out.print(" " + i + " ");
         }
 
-        System.out.println("\n" + result);
+        //System.out.println("\n" + result);
         blackBox.puzzleNo2(result);
 	}
 
