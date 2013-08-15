@@ -29,8 +29,17 @@ public class Puzzle {
      */
 	private static void puzzleNo1() {
 		int result = 0;
+        int counter = 1;
+        int first = 0;
+        int second = 1;
+        while (counter < 9) {
+            int x = second;
+            second = first+second;
+            first = x;
+            counter++;
+        }
 
-		blackBox.puzzleNo1(result);
+		blackBox.puzzleNo1(second);
 	}
 
 	/*
