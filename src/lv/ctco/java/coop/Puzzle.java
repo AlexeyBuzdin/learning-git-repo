@@ -19,6 +19,7 @@ public class Puzzle {
 		puzzleNo8();
 		puzzleNo9();
 
+
         /*
          * If all puzzles are solved black box will uncover a secret information about GIT technology
          */
@@ -76,7 +77,7 @@ public class Puzzle {
 	private static void puzzleNo5() {
 		int result = 0;
 
-        for (int i : Arrays.asList(1, 2, 3, 4, 5)) {
+        for (int i : Arrays.asList(1, 2, 3, 4, 5) ) {
             result += i*i;
         }
 
