@@ -109,7 +109,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo8() {
-		String result = "";
+		String result = "1F";
 
 		blackBox.puzzleNo8(result);
 	}
