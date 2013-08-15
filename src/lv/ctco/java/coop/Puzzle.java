@@ -89,7 +89,7 @@ public class Puzzle {
 	 * and save it to String variable
 	 */
 	private static void puzzleNo6() {
-		String result = "";
+		String result = "1111";
 
 		blackBox.puzzleNo6(result);
 	}
