@@ -1,5 +1,8 @@
 package lv.ctco.java.coop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Puzzle {
 
 	private static Box blackBox;
@@ -29,8 +32,14 @@ public class Puzzle {
      */
 	private static void puzzleNo1() {
 		int result = 0;
+        int next=1;
+        for(int i=0; i<10; i++){
+            result+=next;
+            next=result;
+            System.out.println(result);
+        }
 
-		blackBox.puzzleNo1(result);
+        blackBox.puzzleNo1(result);
 	}
 
 	/*
@@ -64,6 +73,15 @@ public class Puzzle {
 	 */
 	private static void puzzleNo4() {
 		int result [] = {};
+        List<Integer> res=new ArrayList<Integer>();
+        for(int i=13; i<53; i++)    {
+            if((i-i/10*10)==7)  {
+                res.add(i);
+            }
+        }
+        result=new int[res.size()];
+        for(int i=0;i<res.size();i++)
+            result[i]=res.get(i);
 
 		blackBox.puzzleNo4(result);
 	}
@@ -128,8 +146,8 @@ public class Puzzle {
 
     private static void precook() {
         try{
-            Class c = lv.ctco.java.coop.BlackBox.class;
-            blackBox = (Box) c.newInstance();
+//            Class c = lv.ctco.java.coop.BlackBox.class;
+//            blackBox = (Box) c.newInstance();
         } catch (Exception e){
             throw new RuntimeException("Could not find the desirable class");
         }
@@ -137,7 +155,7 @@ public class Puzzle {
 
     private static void printResults() {
 
-        System.out.println(blackBox.depuzzle());
+//        System.out.println(blackBox.depuzzle());
     }
 
 }
