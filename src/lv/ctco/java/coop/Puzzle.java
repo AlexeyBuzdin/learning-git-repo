@@ -173,7 +173,7 @@ public class Puzzle {
     }
 
     private static void puzzleNo11() {
-        double result = (3+4+5+3)/4.0;
+        double result = (2+4+5+3)/4.0;
 
         blackBox.puzzleNo9(result);
     }
