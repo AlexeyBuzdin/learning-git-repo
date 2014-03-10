@@ -21,7 +21,7 @@ public class Puzzle {
         puzzleNo8();
         puzzleNo9();
         puzzleNo10();
-
+        puzzleNo11();
 
         /*
          * If all puzzles are solved black box will uncover a secret information about GIT technology
@@ -163,7 +163,7 @@ public class Puzzle {
     }
 
     /*
-     * Puzzle 9 requires you to find the sum of all digits that aren't 0
+     * Puzzle 10 requires you to find the sum of all digits that aren't 0
      * in number 34052 and divide it by its quantity
      */
     private static void puzzleNo10() {
@@ -172,14 +172,11 @@ public class Puzzle {
         blackBox.puzzleNo9(result);
     }
 
+    private static void puzzleNo11() {
+        double result = (3+4+5+3)/4.0;
 
-
-
-
-
-
-
-
+        blackBox.puzzleNo9(result);
+    }
 
     private static void precook() {
         try{
