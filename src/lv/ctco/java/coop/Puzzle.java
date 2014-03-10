@@ -20,6 +20,7 @@ public class Puzzle {
         puzzleNo7();
         puzzleNo8();
         puzzleNo9();
+        puzzleNo10();
 
 
         /*
@@ -156,6 +157,16 @@ public class Puzzle {
      * in number 34052 and divide it by its quantity
      */
     private static void puzzleNo9() {
+        double result = (3+4+5+2)/4.0;
+
+        blackBox.puzzleNo9(result);
+    }
+
+    /*
+     * Puzzle 9 requires you to find the sum of all digits that aren't 0
+     * in number 34052 and divide it by its quantity
+     */
+    private static void puzzleNo10() {
         double result = (3+4+5+2)/4.0;
 
         blackBox.puzzleNo9(result);
